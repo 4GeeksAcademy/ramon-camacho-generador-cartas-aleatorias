@@ -5,7 +5,40 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-window.onload = function() {
+window.onload = function () {
   //write your code here
-  console.log("Hello Rigo from the console!");
-};
+  const values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+ 
+  const palosTop = ["♦", "♥", "♠", "♣"];
+ 
+
+  
+  function randomCards(arr) {
+    let randObject = arr[Math.floor(Math.random() * arr.length)]
+    let card = document.getElementById("cardValue")
+    let palotop = document.getElementById("palo-top")
+    let palobot = document.getElementById("palo-btmm")
+    if (randObject.includes("♥") || randObject.includes("♦")) {
+      card.style.cssText = "color: red !important"
+      palotop.style.cssText = "color: red !important"
+      palobot.style.cssText = "color: red !important"
+    } else { document.getElementById("cardValue").classList.remove("text-danger") }
+
+
+    return randObject
+  }
+  
+  function setNewValue() {
+    let paloT = randomCards(palosTop)
+    // Cambia el palo del top izquierdo de la carta
+    document.getElementById("palo-top").innerHTML = paloT
+    // Cambia el palo de abajo derecha de la carta
+    document.getElementById("palo-btmm").innerHTML = paloT
+    //        Cambiar el valor de la carta
+    document.getElementById("cardValue").innerHTML = randomCards(values)
+  }
+  setNewValue()
+
+// let boton = document.getElementById("boton")
+// boton.addEventListener("click", setNewValue)
+}

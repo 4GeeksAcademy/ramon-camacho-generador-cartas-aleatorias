@@ -1,5 +1,8 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-body{
+body {
     background: white;
+}
+.text-red {
+    color: red !important;
 }
