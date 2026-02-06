@@ -16,15 +16,15 @@
 
 <body class="bg-success">
   <div class="card mx-auto mt-5 position-relative shadow" style="max-width: 460px; height: 540px; border-radius: 16px;">
-    <div class="bg-transparent position-absolute top-0 start-0 p-4 fs-1" id="palo-top">
-      
+    <div class="bg-transparent position-absolute top-0 start-0 p-4 fs-2" id="palo-top">
+
     </div>
     <div id="cardValue"
       class="card-body d-flex justify-content-center align-items-center text-black display-1 fw-normal">
-      
+
     </div>
-    <div class="bg-transparent position-absolute bottom-0 end-0 p-4 fs-1 rotate-180" id="palo-btmm">
-      
+    <div class="bg-transparent position-absolute bottom-0 end-0 p-4 fs-2 rotate-180" id="palo-btmm">
+
     </div>
   </div>
 
@@ -36,6 +36,30 @@
     </div> -->
 
   <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
+  <div class="container mt-4" style="max-width: 460px;">
+    <div class="d-flex gap-2 justify-content-center">
+      <button id="btnNewCard" class="btn btn-danger btn-lg">
+        New card
+      </button>
+    </div>
+
+    <div class="row g-2 mt-3">
+      <div class="col-6">
+        <label for="cardWidth" class="form-label text-white mb-1">Width (px)</label>
+        <input id="cardWidth" type="number" class="form-control" placeholder="460" min="200" />
+      </div>
+
+      <div class="col-6">
+        <label for="cardHeight" class="form-label text-white mb-1">Height (px)</label>
+        <input id="cardHeight" type="number" class="form-control" placeholder="540" min="200" />
+      </div>
+    </div>
+
+    <p class="text-white-50 text-center mt-2 mb-0" style="font-size: 0.9rem;">
+      Auto refresh every 10 seconds
+    </p>
+  </div>
+
 
   <script type="module" src="/app.js"></script>
 

@@ -1,8 +1,13 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 body {
-    background: white;
+  background: transparent;
 }
+
 .text-red {
     color: red !important;
+}
+
+#palo-btmm {
+    transform: rotate(180deg);
 }
